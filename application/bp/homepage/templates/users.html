@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}Users{% endblock %}
+
+{% block content %}
+    <h2>Users</h2>
+    <h3>User Count = {{ users|length }}</h3>
+
+    {% if users|length == 0 %}
+        No Records Found
+    {% else %}
+        {% for user in users %}
+            <hr>
+            <a href="{{ url_for('homepage.user_detail', user_id=user.id) }}">{{ user.name }}</a> - {{ user.email }} - {{ user.password }}
+        {% endfor %}
+    {% endif %}
+{% endblock %}

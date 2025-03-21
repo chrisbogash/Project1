@@ -1,0 +1,9 @@
+flask
+pytest
+pytest-pylint
+flask-migrate
+faker
+alembic
+SQLAlchemy
+flask-SQLAlchemy
+
